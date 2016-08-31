@@ -1,4 +1,4 @@
-FROM ashtreecc/ubuntu:16:10
+FROM ashtreecc/ubuntu:14:04
 
 MAINTAINER Andrew Nash "akahadaka@gmail.com"
 
