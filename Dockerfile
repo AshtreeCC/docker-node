@@ -1,10 +1,10 @@
-FROM ashtreecc/ubuntu:14.04
+FROM ashtreecc/ubuntu:16.04
 
 MAINTAINER Andrew Nash "akahadaka@gmail.com"
 
 RUN \
 	apt-get remove --purge nodejs npm && \
-	curl -sL https://deb.nodesource.com/setup_4.x | sudo -E bash - && \
+	curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash - && \
 	apt-get install -y nodejs
 
 # Fix node vs nodejs being different
