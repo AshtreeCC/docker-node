@@ -1,4 +1,4 @@
-FROM ashtreecc/ubuntu:16.04
+FROM ashtreecc/ubuntu:latest
 
 MAINTAINER Andrew Nash "akahadaka@gmail.com"
 
