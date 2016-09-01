@@ -1,8 +1,11 @@
-FROM ashtreecc/ubuntu:16.10
+FROM ashtreecc/ubuntu:14.04
 
 MAINTAINER Andrew Nash "akahadaka@gmail.com"
 
-RUN curl https://nodejs.org/download/release/v6.5.0/node-v6.5.0-linux-x64.tar.gz | tar xz -C /usr/local/ --strip=1
+RUN \
+	apt-get remove --purge nodejs npm \
+	curl -sL https://deb.nodesource.com/setup_4.x | sudo -E bash - \
+	apt-get install -y nodejs
 
 VOLUME /src
 WORKDIR /src
