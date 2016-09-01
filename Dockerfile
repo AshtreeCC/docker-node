@@ -7,5 +7,8 @@ RUN \
 	curl -sL https://deb.nodesource.com/setup_4.x | sudo -E bash - && \
 	apt-get install -y nodejs
 
+# Fix node vs nodejs being different
+RUN update-alternatives --install /usr/local/bin/node node /usr/bin/nodejs 10
+
 VOLUME /src
 WORKDIR /src
